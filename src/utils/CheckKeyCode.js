@@ -1,3 +1,4 @@
+/* eslint-disable no-throw-literal */
 export default function CheckKeyCode(event){
 	let code = event.keyCode;
 	try{

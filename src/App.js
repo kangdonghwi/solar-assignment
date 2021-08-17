@@ -1,4 +1,3 @@
-import "./App.css";
 import styled from "styled-components";
 import { useState } from "react";
 import Start from "./components/Start";
@@ -13,7 +12,6 @@ function App() {
   const [arr, setArr] = useState([]);
 
   return (
-    <div className="App">
       <AppContainer>
         <Timer local={LOCAL.KOREA} />
         <Input
@@ -30,7 +28,6 @@ function App() {
         )}
         <Timer local={LOCAL.US} />
       </AppContainer>
-    </div>
   );
 }
 
@@ -46,4 +43,5 @@ const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 `;

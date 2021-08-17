@@ -27,3 +27,10 @@
 ---
 ## 배포 주소
 > https://keen-hopper-48250b.netlify.app/
+
+## 참고
+```
+정렬알고리즘 : https://im-developer.tistory.com/133
+퀵정렬 : https://im-developer.tistory.com/135
+
+```

@@ -8,7 +8,7 @@ export default function CheckKeyCode(event){
 			return;
 		}
 		else if (code === 9 || code === 36 || code === 35 || code === 37 ||
-			code === 39 || code === 8 || code === 46 || code === 16) {
+			code === 39 || code === 8 || code === 46) {
 		return;
 		}
 		else if(code >=96 && code<=105){

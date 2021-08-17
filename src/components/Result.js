@@ -1,4 +1,8 @@
+import { useEffect, useState } from "react";
+
 function Result({ arr }) {
+	const [time,setTime] = useState()
+
 	const quickSort = (arr) => {
 		if (arr.length <= 1){
 			return arr;
@@ -18,10 +22,21 @@ function Result({ arr }) {
 		return quickSort(left).concat(pivot, quickSort(right)); 
 	}
 
+	const timeout = () => {
+		setTimeout(() => {
+			return setTime(quickSort(arr).reverse().join())
+		}, 3000);
+	}
+
+	useEffect(()=> {
+		timeout()
+	})
+
+
   return (
 		<>
 			<div> 결과 오름차순 : {quickSort(arr).join()} </div>
-			<div> 결과 내림차순 : {quickSort(arr).reverse().join()} </div>
+			<div> 결과 내림차순 : {time} </div>
 		</>
   );
 }

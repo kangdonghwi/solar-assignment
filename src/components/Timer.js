@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 function Timer({local}) {
+	const date = new Date();
+	const utc =  date.getTime() + (date.getTimezoneOffset() * 60 * 1000);
+	const KR_TIME_DIFF = 9*60*60*1000;
+	const kr_date = new Date(utc + (KR_TIME_DIFF));
 
-	let date = new Date();
 	let options = { 
 		year: "numeric" ,
 		month: "short" , 
@@ -12,7 +15,7 @@ function Timer({local}) {
 
   return (
 		<>
-		<TimerContainer>{date.toLocaleDateString(local, options)}</TimerContainer>
+		<TimerContainer>{kr_date.toLocaleDateString(local, options)}</TimerContainer>
 		</>
   );
 }
@@ -20,6 +23,5 @@ function Timer({local}) {
 export default Timer;
 
 const TimerContainer = styled.div`
-	border:1px solid black;
-	margin: 20%
+
 `;

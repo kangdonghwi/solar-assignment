@@ -1,4 +1,7 @@
 export default function QuickSort(array, left = 0, right = array.length - 1) {
+  if (array.length <= 1){
+    return array;
+  }
   if (left >= right) {
     return;
   }

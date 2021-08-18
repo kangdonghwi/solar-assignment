@@ -1,11 +1,26 @@
-import CheckKeyCode from "../utils/CheckKeyCode";
+import { useState } from "react";
 import styled from "styled-components";
 
-function Input({ number, setNumber, arr, setArr }) {
+function Input({ arr, setArr }) {
+  const [number,setNumber] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setArr([...arr].concat(number.split(",").map((x) => +x)));
+    
+    const strArr = number.split(',');
+    const numArr = strArr.filter((str) => {
+     try{
+        if(isNaN(str)){
+          throw Error
+        }else{
+          return str
+        }
+      }catch(error){
+        alert('숫자를 입력하세요.')
+      }
+    })
+    console.log(numArr)
+    setArr([...arr].concat(numArr.map((x) => +x)));
     setNumber("");
   };
 
@@ -19,7 +34,6 @@ function Input({ number, setNumber, arr, setArr }) {
         <input
           type="text"
           onChange={onChange}
-          onKeyDown={CheckKeyCode}
           value={number}
         />
         <button type="submit">입력</button>

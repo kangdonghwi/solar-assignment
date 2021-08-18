@@ -25,9 +25,9 @@ function Timer({ local }) {
 export default Timer;
 
 const TimerContainer = styled.div`
-  border: 3px solid black;
-  margin: 30px;
-  font-size: 50px;
-  width: 80%;
-  background-color: grey;
+  width:100%;
+  margin: 20px auto;
+  padding:30px;
+  background-color: #f0f0f0;
+  font-size: 20px;
 `;

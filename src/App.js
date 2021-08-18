@@ -22,9 +22,12 @@ function App() {
         />
         <Start setBool={setBool} />
         {bool ? (
-          <Result arr={arr} />
+          <ResultField><Result arr={arr} /></ResultField>
         ) : (
-          <ResultField>결과 필드 : 시작 버튼을 누르세요</ResultField>
+          <>
+            <Title>결과 필드</Title>
+            <ResultField />
+          </>
         )}
         <Timer local={LOCAL.US} />
       </AppContainer>
@@ -34,21 +37,21 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-  width: 90%;
+  width: 600px;
   margin: 0 auto;
-  height: 100vh;
-  background-color: #fff;
-  border: 30px solid #000;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 `;
+const Title = styled.div`
+  font-size: 25px;
+  
+`;
 const ResultField = styled.div`
-  border : 1px solid black;
-  font-size: 30px;
-  width: 50%;
-  border: none;
-  background: grey;
+  width: 100%;
+  font-size: 25px;
+  margin:auto;
+  padding:30px;
+  background: #f0f0f0;
 `;

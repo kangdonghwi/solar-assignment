@@ -7,7 +7,7 @@ function Start({ setBool }) {
 
   return (
     <StartContainer>
-      <button onClick={onClick}>시작 버튼</button>
+      <button onClick={onClick}>정렬 버튼</button>
     </StartContainer>
   );
 }
@@ -16,13 +16,13 @@ export default Start;
 
 const StartContainer = styled.div`
   width: 80%;
-
-  margin: 100px;
+  margin: 30px;
   button {
     font-size: 30px;
-    width: 44%;
+    width: 50%;
     height: 60px;
     border: none;
-    background: grey;
+    border-radius: 10px;
+    background: #f5f5dc;
   }
 `;

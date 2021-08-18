@@ -2,6 +2,7 @@ import CheckKeyCode from "../utils/CheckKeyCode";
 import styled from "styled-components";
 
 function Input({ number, setNumber, arr, setArr }) {
+
   const onSubmit = (e) => {
     e.preventDefault();
     setArr([...arr].concat(number.split(",").map((x) => +x)));
@@ -21,7 +22,7 @@ function Input({ number, setNumber, arr, setArr }) {
           onKeyDown={CheckKeyCode}
           value={number}
         />
-        <button type="submit">제출</button>
+        <button type="submit">입력</button>
       </form>
     </InputContainer>
   );
@@ -30,11 +31,11 @@ function Input({ number, setNumber, arr, setArr }) {
 export default Input;
 
 const InputContainer = styled.div`
-  margin: 100px;
+  margin:30px auto;
   width: 100%;
   form {
     button {
-      background-color: grey;
+      background-color: #f5f5dc;
       font-size: 15px;
       font-weight: 900;
       height: 60px;
@@ -43,7 +44,7 @@ const InputContainer = styled.div`
     }
     input {
       width: 30%;
-      height: 60px;
+      height: 59px;
       box-sizing: border-box;
     }
   }

@@ -10,13 +10,15 @@ function Input({ arr, setArr }) {
     const strArr = number.split(',');
     const numArr = strArr.filter((str) => {
      try{
-        if(isNaN(str)){
-          throw Error
-        }else{
+        if(!isNaN(str)){
           return str
+        }else{
+          throw Error
+          
         }
       }catch(error){
         alert('숫자를 입력하세요.')
+        return false;
       }
     })
     console.log(numArr)

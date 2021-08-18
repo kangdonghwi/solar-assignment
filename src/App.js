@@ -8,15 +8,12 @@ import LOCAL from "./asset/LocalData";
 
 function App() {
   const [bool, setBool] = useState(false);
-  const [number, setNumber] = useState("");
   const [arr, setArr] = useState([]);
 
   return (
       <AppContainer>
         <Timer local={LOCAL.KOREA} />
         <Input
-          number={number}
-          setNumber={setNumber}
           arr={arr}
           setArr={setArr}
         />

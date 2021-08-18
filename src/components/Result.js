@@ -3,9 +3,7 @@ import styled from "styled-components";
 import QuickSort from "../utils/QuickSort";
 function Result({ arr }) {
   const [time, setTime] = useState();
-
   
-
   const timeout = () => {
     setTimeout(() => {
       return setTime(QuickSort(arr).reverse().join());

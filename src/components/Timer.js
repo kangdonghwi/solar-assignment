@@ -6,7 +6,7 @@ function Timer({ local }) {
   const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
   const kr_date = new Date(utc + KR_TIME_DIFF);
 
-  let options = {
+  const options = {
     year: "numeric",
     month: "short",
     day: "numeric",

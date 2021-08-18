@@ -24,7 +24,7 @@ function App() {
         {bool ? (
           <Result arr={arr} />
         ) : (
-          <div>결과 필드 : 시작 버튼을 누르세요</div>
+          <ResultField>결과 필드 : 시작 버튼을 누르세요</ResultField>
         )}
         <Timer local={LOCAL.US} />
       </AppContainer>
@@ -44,4 +44,11 @@ const AppContainer = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+`;
+const ResultField = styled.div`
+  border : 1px solid black;
+  font-size: 30px;
+  width: 50%;
+  border: none;
+  background: grey;
 `;
